@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private void addControls(){
         txt_hoten=findViewById(R.id.txtHoTen);
         txt_cmnd=findViewById(R.id.txtCMND);
-        txt_thongtinkhac=findViewById((R.id.txtThongTinKhac);
+        txt_thongtinkhac=findViewById((R.id.txtThongTinKhac));
         btn_luu=findViewById(R.id.btnLuu);
         rdo_nam=findViewById(R.id.rdbNam);
         rdo_nu=findViewById(R.id.rdbNu);
