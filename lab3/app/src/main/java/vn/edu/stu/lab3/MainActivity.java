@@ -43,18 +43,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    private void addControls(){
-        txt_hoten=findViewById(R.id.txtHoTen);
-        txt_cmnd=findViewById(R.id.txtCMND);
-        txt_thongtinkhac=findViewById((R.id.txtThongTinKhac));
-        btn_luu=findViewById(R.id.btnLuu);
-        rdo_nam=findViewById(R.id.rdbNam);
-        rdo_nu=findViewById(R.id.rdbNu);
-        rdo_khac=findViewById(R.id.rdbKhongXacDinh);
-        chk_an=findViewById(R.id.ckbAnNgon);
-        chk_mac=findViewById(R.id.ckbMacDep);
-        chk_choigame=findViewById(R.id.ckbChoiGame);
-        list=findViewById(R.id.List);
+
+    private void addControls() {
+        txt_hoten = findViewById(R.id.txtHoTen);
+        txt_cmnd = findViewById(R.id.txtCMND);
+        txt_thongtinkhac = findViewById((R.id.txtThongTinKhac));
+        btn_luu = findViewById(R.id.btnLuu);
+        rdo_nam = findViewById(R.id.rdbNam);
+        rdo_nu = findViewById(R.id.rdbNu);
+        rdo_khac = findViewById(R.id.rdbKhongXacDinh);
+        chk_an = findViewById(R.id.ckbAnNgon);
+        chk_mac = findViewById(R.id.ckbMacDep);
+        chk_choigame = findViewById(R.id.ckbChoiGame);
+        list = findViewById(R.id.List);
         adapter = new ArrayAdapter(
                 MainActivity.this,
                 android.R.layout.simple_list_item_1,
@@ -62,24 +63,35 @@ public class MainActivity extends AppCompatActivity {
         );
         list.setAdapter(adapter);
     }
-private void addEvents(){
+
+    private void addEvents() {
         btn_luu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Person p = new Person();
                 p.setHoten(txt_hoten.getText().toString());
                 p.setCmnd(txt_cmnd.getText().toString());
                 p.setThonginkhac(txt_thongtinkhac.getText().toString());
-
-                if(rdo_nam.isChecked()==true)
-                    p.setGioitinh(0);
-
-
+                if (rdo_nam.isChecked() )
+                    p.setGioitinh("nam");
+                else if (rdo_nu.isChecked() )
+                    p.setGioitinh("nu");
+                else
+                    p.setGioitinh("khong xac dinh");
+                ArrayList<String> st=new ArrayList<>();
+                if(chk_an.isChecked() )
+                    st.add(chk_an.getText().toString());
+                else if(chk_mac.isChecked() )
+                    st.add(chk_mac.getText().toString());
+                else
+                    st.add(chk_choigame.getText().toString());
+                p.setSothich(st);
+                array.add(p);
+                adapter.notifyDataSetChanged();
             }
         });
 
-}
+    }
 
 //be linh xinh dep
 

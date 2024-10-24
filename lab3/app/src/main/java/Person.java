@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Person {
     private String hoten;
     private String cmnd;
-    private int gioitinh;
+    private String gioitinh;
     private ArrayList<String> sothich;
     private String thonginkhac;
 
-    public Person(String hoten, String cmnd, int gioitinh, ArrayList<String> sothich, String thonginkhac) {
+    public Person(String hoten, String cmnd, String gioitinh, ArrayList<String> sothich, String thonginkhac) {
         this.hoten = hoten;
         this.cmnd = cmnd;
         this.gioitinh = gioitinh;
@@ -34,11 +34,11 @@ public class Person {
         this.sothich = sothich;
     }
 
-    public int getGioitinh() {
+    public String getGioitinh() {
         return gioitinh;
     }
 
-    public void setGioitinh(int gioitinh) {
+    public void setGioitinh(String gioitinh) {
         this.gioitinh = gioitinh;
     }
 
