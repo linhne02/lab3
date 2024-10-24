@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">lab3_ThongTinCaNhan</string>
+    <string name="thong_tin_ca_nhan">Thong tin ca nhan</string>
+    <string name="ho_ten">Ho ten:</string>
+    <string name="cmnd">CMND:</string>
+    <string name="gioi_tinh">Gioi tinh:</string>
+    <string name="nam">nam</string>
+    <string name="nu">nu</string>
+    <string name="khong_xac_dinh">khong xac dinh</string>
+    <string name="so_thich">So thich:</string>
+    <string name="an_ngon">an ngon</string>
+    <string name="mac_dep">mac dep</string>
+    <string name="choi_game">choi game</string>
+    <string name="thong_tin_khac">Thong tin khac:</string>
+    <string name="luu_thong_tin">luu thong tin</string>
+</resources>
